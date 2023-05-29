@@ -34,7 +34,8 @@ time.sleep(20)
 # get the job page you're interested
 job_link = input("Enter the LinkedIn job listing link: ")
 driver.get(job_link)
-time.sleep(40)
+time.sleep(40
+           )
 job_src = driver.page_source
 
 # Now using beautiful soup
