@@ -31,64 +31,61 @@ Here's a brief explanation of each file in the project:
 
 **.gitignore**: This file specifies the files and directories that should be ignored by Git version control. In this case, the config.py file is added to the .gitignore file to prevent sensitive information from being committed to a repository.
 
-## 3. Installation and Usage
+
+## Installation and Usage
 
 To use this project, follow the steps below:
 
-Clone the repository to your local machine using the following command:
+1. Clone the repository to your local machine using the following command:
+   ```
+   git clone <repository_url>
+   ```
 
-```
-git clone <repository_url>
-Navigate to the project directory:
-```
+2. Navigate to the project directory:
+   ```
+   cd project
+   ```
 
-```
-cd project
-```
+3. Create a virtual environment to isolate the project dependencies. Run the following command to create and activate a virtual environment:
 
-Create a virtual environment to isolate the project dependencies. Run the following command to create and activate a virtual environment:
+   For Windows:
+   ```
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
-For Windows:
+   For macOS and Linux:
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-```
-python -m venv venv
-venv\Scripts\activate
-```
-For macOS and Linux:
+4. Install the project dependencies by running the following command:
+   ```
+   python setup.py install
+   ```
 
-```
-python3 -m venv venv
-source venv/bin/activate
-```
+   This will use the `setup.py` file to install the required packages listed in the `requirements.txt` file.
 
-Install the required packages from the **requirements.txt** file. Run the following command:
+5. Update the `config.py` file with your own configuration details. Replace the placeholder values with your **Airtable API key, LinkedIn credentials, OpenAI API key, and other settings**.
 
-```
-pip install -r requirements.txt
-```
+6. Run the following command to start the job scraping process:
+   ```
+   python main.py
+   ```
 
-This will install the necessary dependencies, including **pyairtable, selenium, beautifulsoup4, openai, and webdriver_manager**.
+   This command will prompt you to enter the LinkedIn job listing link. The script will open a web browser, log into your LinkedIn account, scrape the job information, generate summaries using the OpenAI API, and add the data to your specified Airtable table.
 
-Update the **config_TEMPLATE.py** file with your own configuration details and RENAME it to **'config.py'**. Replace the placeholder values with your **Airtable API key, LinkedIn credentials, OpenAI API key, and other settings.**
+   **Note:** Make sure you have a stable internet connection during the process.
 
-Run the **main.py** script to start the job scraping process:
-
-```
-python main.py
-```
-The script will open a web browser, log into your LinkedIn account, and **prompt you to enter the LinkedIn job listing link**. It will then scrape the job information, generate summaries using the OpenAI API, and add the data to your specified Airtable table.
-
-Note: Make sure you have a stable internet connection during the process.
-
-Review the output and verify that the job information has been added to your Airtable table.
+7. Review the output and verify that the job information has been added to your Airtable table.
 
 Once you have finished using the project, you can deactivate the virtual environment by running the following command:
-
 ```
 deactivate
 ```
-By following these steps, you should be able to set up and run the project successfully. If you encounter any issues, make sure you have provided the correct configuration details and that the required dependencies are installed properly.
 
+By following these steps, you should be able to set up and run the project successfully. If you encounter any issues, make sure you have provided the correct configuration details and that the required dependencies are installed properly.
 ## 4. Configuration
 
 Before running the project, make sure to update the config.py file with your own configuration details. The config.py file contains various settings and API keys required for the project to function correctly. Here's a breakdown of the configuration variables:
