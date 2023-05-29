@@ -15,6 +15,8 @@ project/
 ├── config.py
 ├── requirements.txt
 ├── .gitignore
+├─ templates/
+│    └─ Jobs_table_Airtable_TEMPLATE.csv
 └── README.md
 ````
 Here's a brief explanation of each file in the project:
