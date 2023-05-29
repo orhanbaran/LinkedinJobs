@@ -6,6 +6,9 @@ __pycache__/
 # Config file for Airtable, OpenAI and Linkedin account information and API keys
 config.py
 
+#virtual environment
+myenv/
+
 # C extensions
 *.so
 
